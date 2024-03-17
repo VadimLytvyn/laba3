@@ -4,6 +4,8 @@ class Calculator:
         return a + b
     def subtract(self, a, b):
         return a - b
+    def multiply(self,a,b):
+        return a*b
     
 class TestCalculator(unittest.TestCase):
     def setUp(self):
@@ -18,8 +20,13 @@ class TestCalculator(unittest.TestCase):
         a, b = -30, -40
         result = self.calculator.subtract(a, b)
         self.assertEqual(result, -70, "Віднімання -30 і -40 має бути -70")
+    
+    def test_mulyipy_posiyive_numbers(self):
+        a,b=10,6
+        result=self.calculator.multiply(a,b)
+        self.assertAlmostEqual(result,60,"Добуток 10 і 6 має бути 60")
     unittest.main()
     
 calculator = Calculator()
-result = calculator.subtract(-30,-40)
-print('Віднімання:', result)
+result = calculator.subtract(10,6)
+print('Множення:', result)
