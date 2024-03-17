@@ -4,6 +4,7 @@ class Calculator:
         return a + b
     def subtract(self, a, b):
         return a - b
+<<<<<<< Updated upstream
     def multiply(self,a,b):
         return a*b
     def devide(self,a,b):
@@ -11,6 +12,8 @@ class Calculator:
             raise ValueError("Ділення на нуль не можливе ")
         return a/b
     
+=======
+>>>>>>> Stashed changes
     
 class TestCalculator(unittest.TestCase):
     def setUp(self):
@@ -25,6 +28,7 @@ class TestCalculator(unittest.TestCase):
         a, b = -30, -40
         result = self.calculator.subtract(a, b)
         self.assertEqual(result, -70, "Віднімання -30 і -40 має бути -70")
+<<<<<<< Updated upstream
     
     def test_mulyipy_posiyive_numbers(self):
         a,b=10,6
@@ -78,3 +82,10 @@ if __name__=="__main__":
 calculator=Calculator()
 result=calculator(6,3)
 print("Резултат:")
+=======
+    unittest.main()
+    
+calculator = Calculator()
+result = calculator.subtract(-30,-40)
+print('Віднімання:', result)
+>>>>>>> Stashed changes
